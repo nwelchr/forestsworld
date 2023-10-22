@@ -1,3 +1,4 @@
 import Logo from "./Logo";
+import Toggle from "./Toggle";
 
-export { Logo };
+export { Logo, Toggle };
