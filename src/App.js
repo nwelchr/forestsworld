@@ -12,10 +12,10 @@ function App() {
       {/* <Logo /> */}
       {/* {t("Welcome to React")} */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Section id="about" title="About" />
-      <Section id="pastwork" title="Past Work" />
-      <Section id="projects" title="Projects" />
-      <Section id="contact" title="Contact" />
+      <Section id="about" title={t("About")} />
+      <Section id="pastwork" title={t("Past Work")} />
+      <Section id="projects" title={t("Projects")} />
+      <Section id="contact" title={t("Contact")} />
     </ThemeProvider>
   );
 }

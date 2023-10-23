@@ -5,12 +5,18 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      "Welcome to React": "Welcome to React",
+      About: "About",
+      "Past Work": "Past Work",
+      Projects: "Projects",
+      Contact: "Contact",
     },
   },
   fr: {
     translation: {
-      "Welcome to React": "Bienvenue à React",
+      About: "À Propos",
+      "Past Work": "Expériences Passées",
+      Projects: "Projets",
+      Contact: "Contact",
     },
   },
 };

@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import styled from "styled-components";
 import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
+import { useTranslation } from "react-i18next";
 
 const NavbarStyled = styled.div`
   padding: 10px 50px;
@@ -22,19 +23,20 @@ const NavbarStyled = styled.div`
 `;
 
 const Navbar = ({ theme, toggleTheme }) => {
+  const { t } = useTranslation();
   return (
     <NavbarStyled>
       <Link to="about" smooth={true}>
-        About
+        {t("About")}
       </Link>
       <Link to="pastwork" smooth={true}>
-        Past Work
+        {t("Past Work")}
       </Link>
       <Link to="projects" smooth={true}>
-        Projects
+        {t("Projects")}
       </Link>
       <Link to="contact" smooth={true}>
-        Contact
+        {t("Contact")}
       </Link>
       <LanguageToggle />
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
