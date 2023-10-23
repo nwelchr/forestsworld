@@ -5,8 +5,6 @@ const SectionStyled = styled.section`
   width: 100%;
   padding: 50px;
   margin: 10px;
-  background-color: ${({ theme: { mode } }) =>
-    mode === "dark" ? "#333" : "#EEE"};
 
   h2 {
     margin-bottom: 20px;
