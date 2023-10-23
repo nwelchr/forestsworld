@@ -8,14 +8,8 @@ import { useTranslation } from "react-i18next";
 const NavbarStyled = styled.div`
   padding: 10px 50px;
   color: #eee;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   z-index: 1000;
-
-  a {
-    margin: 0 15px;
-    color: ${({ theme: { mode } }) => (mode === "dark" ? "#999" : "#333")};
-    cursor: pointer;
-  }
 
   @media (max-width: 600px) {
     width: 100%;

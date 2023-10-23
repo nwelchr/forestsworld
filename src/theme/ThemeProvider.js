@@ -19,8 +19,7 @@ const Background = styled.div`
   background-size: 80px 80px;
   background-color: ${({ theme: { mode } }) =>
     mode === "light" ? "#f7f7f7" : "#1e1e1e"};
-  transition: background-color 0.5s ease-in-out,
-    background-image 0.5s ease-in-out;
+  transition: background-color 1s ease-in-out, background-image 1s ease-in-out;
 `;
 
 const StyledContainer = styled.div`
