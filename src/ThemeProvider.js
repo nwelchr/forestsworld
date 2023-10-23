@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { ThemeToggle } from "./components";
+import styled, {
+  ThemeProvider as StyledThemeProvider,
+} from "styled-components";
 
-import styled, { css } from "styled-components";
-
-const BackgroundGrid = styled.div`
+const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -14,14 +13,14 @@ const BackgroundGrid = styled.div`
   /* Base (light) theme */
   background-image: ${({ theme: { mode } }) =>
     mode === "light"
-      ? `linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-         linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px)`
-      : `linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-         linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`};
-  background-size: 100px 100px;
+      ? `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M 0 20 Q 20 40 40 20 T 80 20' fill='none' stroke='%23d0d0d0' stroke-width='0.2' transform='rotate(45 20 20)'/%3E%3C/svg%3E")`
+      : `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M 0 20 Q 20 40 40 20 T 80 20' fill='none' stroke='%23404040' stroke-width='0.2' transform='rotate(45 20 20)'/%3E%3C/svg%3E")`};
+
+  background-size: 80px 80px;
   background-color: ${({ theme: { mode } }) =>
     mode === "light" ? "#f7f7f7" : "#1e1e1e"};
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out,
+    background-image 0.5s ease-in-out;
 `;
 
 const StyledContainer = styled.div`
@@ -33,21 +32,12 @@ const StyledContainer = styled.div`
   overflow-y: auto;
 `;
 
-const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("dark");
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
-
+const ThemeProvider = ({ children, theme }) => {
   return (
     <StyledThemeProvider theme={{ mode: theme }}>
-      <BackgroundGrid />
+      <Background />
       <StyledContainer>
         <div style={{ position: "relative", zIndex: 1 }}>
-          <ThemeToggle onClick={toggleTheme}>
-            {theme === "light" ? "🌙" : "☀️"}
-          </ThemeToggle>
           HELLO WHAT IS UP
           {children}
         </div>

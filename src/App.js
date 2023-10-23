@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import ThemeProvider from "./ThemeProvider";
 import GlobalStyles from "./GlobalStyles";
-import { Logo, LanguageToggle, Navbar, Section } from "./components";
+import { Logo, Section } from "./components";
+import { Navbar } from "./components/navigation";
 import { useTranslation } from "react-i18next";
+import useTheme from "./useTheme";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -13,15 +15,15 @@ const AppWrapper = styled.div`
 `;
 
 function App() {
+  const [theme, toggleTheme] = useTheme();
   const { t } = useTranslation();
   return (
     <AppWrapper>
-      <ThemeProvider>
+      <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Logo />
-        <LanguageToggle />
         {t("Welcome to React")}
-        <Navbar />
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
         <Section id="about" title="About" />
         <Section id="pastwork" title="Past Work" />
         <Section id="projects" title="Projects" />

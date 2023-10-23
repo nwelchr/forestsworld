@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
+import LanguageToggle from "./LanguageToggle";
+import ThemeToggle from "./ThemeToggle";
 
 const NavbarStyled = styled.div`
   padding: 10px 50px;
   color: #eee;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
   z-index: 1000;
 
   a {
@@ -19,9 +21,9 @@ const NavbarStyled = styled.div`
   }
 `;
 
-const Navbar = ({ theme }) => {
+const Navbar = ({ theme, toggleTheme }) => {
   return (
-    <NavbarStyled theme={theme}>
+    <NavbarStyled>
       <Link to="about" smooth={true}>
         About
       </Link>
@@ -34,6 +36,8 @@ const Navbar = ({ theme }) => {
       <Link to="contact" smooth={true}>
         Contact
       </Link>
+      <LanguageToggle />
+      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
     </NavbarStyled>
   );
 };
