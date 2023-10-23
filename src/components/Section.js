@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const SectionStyled = styled.div`
-  min-height: 100vh;
+const SectionStyled = styled.section`
+  width: 100%;
   padding: 50px;
-  background-color: black;
-  opacity: 20%;
-  color: red;
+  margin: 10px;
+  background-color: ${({ theme: { mode } }) =>
+    mode === "dark" ? "#333" : "#EEE"};
 
   h2 {
     margin-bottom: 20px;
