@@ -32,15 +32,18 @@ const StyledContainer = styled.div`
   overflow-y: auto;
 `;
 
+const ScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const ThemeProvider = ({ children, theme }) => {
   return (
     <StyledThemeProvider theme={{ mode: theme }}>
       <Background />
       <StyledContainer>
-        <div style={{ position: "relative", zIndex: 1 }}>
-          HELLO WHAT IS UP
-          {children}
-        </div>
+        <ScrollContainer>{children}</ScrollContainer>
       </StyledContainer>
     </StyledThemeProvider>
   );

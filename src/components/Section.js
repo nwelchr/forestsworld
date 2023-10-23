@@ -17,7 +17,12 @@ const Section = ({ id, title }) => {
       <h2>{title}</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        imperdiet...
+        imperdiet...Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus imperdiet...Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Phasellus imperdiet...Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Phasellus imperdiet...Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Phasellus imperdiet...Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Phasellus imperdiet...
       </p>
     </SectionStyled>
   );

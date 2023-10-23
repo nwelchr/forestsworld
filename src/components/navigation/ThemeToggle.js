@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import useTheme from "../../useTheme";
 
 const StyledButton = styled.button`
   background: ${({ theme: { mode } }) => (mode === "dark" ? "#111" : "#EEE")};
