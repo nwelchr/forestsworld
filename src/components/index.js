@@ -1,4 +1,5 @@
 import Logo from "./Logo";
-import Toggle from "./Toggle";
+import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
 
-export { Logo, Toggle };
+export { Logo, ThemeToggle, LanguageToggle };

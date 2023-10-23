@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import ThemeProvider from "./ThemeProvider";
 import GlobalStyles from "./GlobalStyles";
-import { Logo } from "./components";
+import { Logo, LanguageToggle } from "./components";
+import { useTranslation } from "react-i18next";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -12,12 +13,14 @@ const AppWrapper = styled.div`
 `;
 
 function App() {
+  const { t } = useTranslation();
   return (
     <AppWrapper>
       <ThemeProvider>
         <GlobalStyles />
         <Logo />
-        What is goin on my children!!!!
+        <LanguageToggle />
+        {t("Welcome to React")}
       </ThemeProvider>
     </AppWrapper>
   );

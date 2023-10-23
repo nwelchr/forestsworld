@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Toggle = styled.button`
+const ThemeToggle = styled.button`
   background: ${({ theme: { mode } }) => (mode === "dark" ? "#111" : "#EEE")};
   color: ${({ theme: { mode } }) => (mode === "dark" ? "$EEE" : "#111")};
   border-radius: 20px;
@@ -13,4 +13,4 @@ const Toggle = styled.button`
   }
 `;
 
-export default Toggle;
+export default ThemeToggle;

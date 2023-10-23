@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { Toggle } from "./components";
+import { ThemeToggle } from "./components";
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
@@ -11,7 +11,9 @@ const ThemeProvider = ({ children }) => {
 
   return (
     <StyledThemeProvider theme={{ mode: theme }}>
-      <Toggle onClick={toggleTheme}>{theme === "light" ? "🌙" : "☀️"}</Toggle>
+      <ThemeToggle onClick={toggleTheme}>
+        {theme === "light" ? "🌙" : "☀️"}
+      </ThemeToggle>
       {children}
     </StyledThemeProvider>
   );
