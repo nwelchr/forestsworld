@@ -6,34 +6,57 @@ import ThemeToggle from "./ThemeToggle";
 import { useTranslation } from "react-i18next";
 
 const NavbarStyled = styled.div`
+  width: 100%;
   padding: 10px 50px;
-  color: #eee;
+  color: #ccc;
   transition: all 1s ease-in-out;
-  z-index: 1000;
-
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Change here */
+  background: rgba(0, 0, 0, 0.5);
   @media (max-width: 600px) {
     width: 100%;
   }
+`;
+
+const StyledLink = styled(Link)`
+  padding: 10px;
+`;
+
+const LinksContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; /* This will allow it to take up all available space */
+`;
+
+const ToggleContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const Navbar = ({ theme, toggleTheme }) => {
   const { t } = useTranslation();
   return (
     <NavbarStyled>
-      <Link to="about" smooth={true}>
-        {t("About")}
-      </Link>
-      <Link to="pastwork" smooth={true}>
-        {t("Past Work")}
-      </Link>
-      <Link to="projects" smooth={true}>
-        {t("Projects")}
-      </Link>
-      <Link to="contact" smooth={true}>
-        {t("Contact")}
-      </Link>
-      <LanguageToggle />
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      <LinksContainer>
+        <StyledLink to="about" smooth={true}>
+          {t("About")}
+        </StyledLink>
+        <StyledLink to="pastwork" smooth={true}>
+          {t("Past Work")}
+        </StyledLink>
+        <StyledLink to="projects" smooth={true}>
+          {t("Projects")}
+        </StyledLink>
+        <StyledLink to="contact" smooth={true}>
+          {t("Contact")}
+        </StyledLink>
+      </LinksContainer>
+      <ToggleContainer>
+        <LanguageToggle />
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      </ToggleContainer>
     </NavbarStyled>
   );
 };

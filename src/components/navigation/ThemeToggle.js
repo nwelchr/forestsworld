@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  background: ${({ theme: { mode } }) => (mode === "dark" ? "#111" : "#EEE")};
-  color: ${({ theme: { mode } }) => (mode === "dark" ? "$EEE" : "#111")};
+  background: ${({ theme: { mode } }) => (mode === "dark" ? "#333" : "#ccc")};
+  color: ${({ theme: { mode } }) => (mode === "dark" ? "#ccc" : "#333")};
   border-radius: 20px;
   padding: 10px 20px;
   cursor: pointer;

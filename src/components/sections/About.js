@@ -13,19 +13,39 @@ const SelfImg = styled.img`
   padding: 2px;
 `;
 
+const ColumnFlex = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+const WelcomeText = styled.h1`
+  text-align: center;
+  font-size: 60px;
+  font-weight: normal;
+`;
+
+const Blurb = styled.section`
+  display: flex;
+  padding: 20px;
+`;
+
 const About = () => {
   const { t } = useTranslation();
   return (
     <Section id="about">
-      <div>
-        <h2>{t("Welcome")}</h2>
-        <p>{t("Blurb")}</p>
-      </div>
-      <div>
-        <p>
-          <SelfImg src={self} />
-        </p>
-      </div>
+      <WelcomeText>{t("Welcome")}</WelcomeText>
+      <ColumnFlex>
+        <Blurb>
+          <p>{t("Blurb")}</p>
+        </Blurb>
+        <div>
+          <p>
+            <SelfImg src={self} />
+          </p>
+        </div>
+      </ColumnFlex>
     </Section>
   );
 };
