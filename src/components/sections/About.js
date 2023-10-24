@@ -2,7 +2,7 @@ import React from "react";
 import { Section } from "../common";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import self from "../../assets/self.jpg";
+import self from "../../assets/self-test.png";
 
 const SelfImg = styled.img`
   border-radius: 50%;
