@@ -1,4 +1,6 @@
-import { Logo, Section } from "./components";
+import { Logo } from "./components";
+import { Section } from "./components/common";
+import { About, Contact, PastWork, Projects } from "./components/sections";
 import { Navbar } from "./components/navigation";
 import { useTranslation } from "react-i18next";
 import { useTheme, GlobalStyles, ThemeProvider } from "./theme";
@@ -12,10 +14,10 @@ function App() {
       {/* <Logo /> */}
       {/* {t("Welcome to React")} */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Section id="about" title={t("About")} />
-      <Section id="pastwork" title={t("Past Work")} />
-      <Section id="projects" title={t("Projects")} />
-      <Section id="contact" title={t("Contact")} />
+      <About />
+      <PastWork />
+      <Projects />
+      <Contact />
     </ThemeProvider>
   );
 }
