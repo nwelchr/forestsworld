@@ -4,12 +4,12 @@ import styled from "styled-components";
 import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
 import { useTranslation } from "react-i18next";
+import { Logo } from "../";
 
 const NavbarStyled = styled.div`
   width: 100%;
   padding: 10px 50px;
   color: #ccc;
-  transition: all 1s ease-in-out;
   position: fixed;
   display: flex;
   align-items: center;
@@ -39,6 +39,7 @@ const Navbar = ({ theme, toggleTheme }) => {
   const { t } = useTranslation();
   return (
     <NavbarStyled>
+      <Logo />
       <LinksContainer>
         <StyledLink to="about" smooth={true}>
           {t("About")}

@@ -11,6 +11,8 @@ const LanguageButton = styled.button`
   font-weight: bold;
 
   color: ${({ theme: { mode } }) => (mode === "dark" ? "#ccc" : "#333")};
+
+  transition: color 1s ease-in-out;
 `;
 
 const LanguageToggle = ({ theme }) => {
