@@ -41,16 +41,16 @@ const Navbar = ({ theme, toggleTheme }) => {
     <NavbarStyled>
       <Logo />
       <LinksContainer>
-        <StyledLink to="about" smooth={true}>
+        <StyledLink to="about" smooth duration={2000}>
           {t("About")}
         </StyledLink>
-        <StyledLink to="pastwork" smooth={true}>
+        <StyledLink to="pastwork" smooth duration={2000}>
           {t("Past Work")}
         </StyledLink>
-        <StyledLink to="projects" smooth={true}>
+        <StyledLink to="projects" smooth duration={2000}>
           {t("Projects")}
         </StyledLink>
-        <StyledLink to="contact" smooth={true}>
+        <StyledLink to="contact" smooth duration={2000}>
           {t("Contact")}
         </StyledLink>
       </LinksContainer>

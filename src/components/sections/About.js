@@ -29,6 +29,7 @@ const WelcomeText = styled.h1`
 const Blurb = styled.section`
   display: flex;
   padding: 20px;
+  max-width: 600px;
 `;
 
 const About = () => {

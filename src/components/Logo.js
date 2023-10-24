@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link } from "react-scroll";
 import logo from "../assets/logo512.png";
 
 const Wrapper = styled.img`
@@ -9,7 +9,11 @@ const Wrapper = styled.img`
 `;
 
 const Logo = () => {
-  return <Wrapper src={logo} alt="Hello!" />;
+  return (
+    <Link to="about" smooth duration={2000}>
+      <Wrapper src={logo} alt="Hello!" />
+    </Link>
+  );
 };
 
 export default Logo;
