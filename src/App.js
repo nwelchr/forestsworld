@@ -1,5 +1,4 @@
 import { Logo } from "./components";
-import { Section } from "./components/common";
 import { About, Contact, PastWork, Projects } from "./components/sections";
 import { Navbar } from "./components/navigation";
 import { useTranslation } from "react-i18next";
