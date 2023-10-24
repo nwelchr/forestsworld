@@ -9,6 +9,7 @@ const Background = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
 
   /* Base (light) theme */
   background-image: ${({ theme: { mode } }) =>
@@ -22,15 +23,6 @@ const Background = styled.div`
   transition: background-color 1s ease-in-out, background-image 1s ease-in-out;
 `;
 
-const StyledContainer = styled.div`
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  position: fixed;
-  overflow-y: auto;
-`;
-
 const ScrollContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -41,9 +33,7 @@ const ThemeProvider = ({ children, theme }) => {
   return (
     <StyledThemeProvider theme={{ mode: theme }}>
       <Background />
-      <StyledContainer>
-        <ScrollContainer>{children}</ScrollContainer>
-      </StyledContainer>
+      <ScrollContainer>{children}</ScrollContainer>
     </StyledThemeProvider>
   );
 };

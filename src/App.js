@@ -10,8 +10,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      {/* <Logo /> */}
-      {/* {t("Welcome to React")} */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <About />
       <PastWork />
