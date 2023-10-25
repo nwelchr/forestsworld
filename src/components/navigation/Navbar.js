@@ -39,7 +39,7 @@ const StyledLink = styled(Link)`
     width: 0%;
     height: 1px;
     background-color: currentColor;
-    transition: width 1.5s ease-out;
+    transition: width 1s ease-out;
   }
 
   &:hover::before {
