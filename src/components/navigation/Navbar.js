@@ -14,14 +14,37 @@ const NavbarStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between; /* Change here */
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   @media (max-width: 600px) {
     width: 100%;
   }
 `;
 
 const StyledLink = styled(Link)`
-  padding: 10px;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+
+  /* Target the rendered anchor tag inside StyledLink */
+
+  position: relative; /* Provide position context for pseudo-element */
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 1.5s ease-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
 `;
 
 const LinksContainer = styled.div`

@@ -11,16 +11,31 @@ const Background = styled.div`
   bottom: 0;
   z-index: -1;
 
-  /* Base (light) theme */
-  background-image: ${({ theme: { mode } }) =>
-    mode === "light"
-      ? `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M 0 20 Q 20 40 40 20 T 80 20' fill='none' stroke='%23d0d0d0' stroke-width='0.2' transform='rotate(45 20 20)'/%3E%3C/svg%3E")`
-      : `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M 0 20 Q 20 40 40 20 T 80 20' fill='none' stroke='%23404040' stroke-width='0.2' transform='rotate(45 20 20)'/%3E%3C/svg%3E")`};
+  background: ${({ theme: { mode } }) =>
+    mode === "dark"
+      ? "linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%), black;"
+      : "linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%), white;"}
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+  transition: background 1s ease-in-out;
 
-  background-size: 80px 80px;
-  background-color: ${({ theme: { mode } }) =>
-    mode === "light" ? "#f7f7f7" : "#1e1e1e"};
-  transition: background-color 1s ease-in-out, background-image 1s ease-in-out;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 50% 100%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
 `;
 
 const ScrollContainer = styled.div`
