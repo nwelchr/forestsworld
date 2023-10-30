@@ -2,17 +2,32 @@ import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { useTranslation } from "react-i18next";
 
-const LanguageButton = styled.button`
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  font-size: 1em;
-  font-weight: bold;
+const StyledLink = styled.a`
+  display: inline-block;
+  padding: 3px;
+  margin: 7px;
+  text-decoration: none;
+  font-weight: 300;
 
-  color: ${({ theme: { mode } }) => (mode === "dark" ? "#ccc" : "#333")};
+  /* Target the rendered anchor tag inside StyledLink */
 
-  transition: color 1s ease-in-out;
+  position: relative; /* Provide position context for pseudo-element */
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 1s ease-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
 `;
 
 const LanguageToggle = ({ theme }) => {
@@ -31,13 +46,13 @@ const LanguageToggle = ({ theme }) => {
   const toLanguage = fromLanguage === "en" ? "fr" : "en";
 
   return (
-    <LanguageButton
+    <StyledLink
       theme={theme}
       style={{ opacity: visible ? 1 : 0 }}
       onClick={() => changeLanguage(toLanguage)}
     >
       {fromLanguage.toUpperCase()}
-    </LanguageButton>
+    </StyledLink>
   );
 };
 

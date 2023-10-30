@@ -19,33 +19,6 @@ const NavbarStyled = styled.div`
   }
 `;
 
-const StyledLink = styled.a`
-  display: inline-block;
-  padding: 5px;
-  margin: 5px;
-  text-decoration: none;
-
-  /* Target the rendered anchor tag inside StyledLink */
-
-  position: relative; /* Provide position context for pseudo-element */
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0%;
-    height: 1px;
-    background-color: currentColor;
-    transition: width 1s ease-out;
-  }
-
-  &:hover::before {
-    width: 100%;
-  }
-`;
-
 const ToggleContainer = styled.div`
   display: flex;
   align-items: center;
