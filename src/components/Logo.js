@@ -4,7 +4,6 @@ import logo from "../assets/logo512.png";
 
 const Wrapper = styled.img`
   width: 50px;
-  padding: 0px 20px;
 `;
 
 const Logo = () => {
