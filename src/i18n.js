@@ -11,12 +11,9 @@ const resources = {
       Contact: "Contact",
       Welcome: "Welcome to my",
       World: "world",
+      Resume: "Resume",
       Blurb:
-        "From a young age, my fascination with language—spoken, signed, and coded—has been unwavering: language is our most powerful bridge to understanding and connection. As a developer, I channel this passion to craft tools that amplify users' potential and voice.",
-      Synergia:
-        "Synergía is an international LGBT human rights organization dedicated to empowering local social movements. Built in a half-day hackathon at Github.",
-      "Moving On":
-        "The Power of Friendship is a minimalist puzzle platformer where a blocky, motley crew must work together to succeed. Made in native JavaScript, HTML, and CSS.",
+        "From a young age, my fascination with language—spoken, signed, and coded—has been unwavering: language is our most powerful bridge to understanding and connection. As a developer, I channel this passion to craft tools that amplify users' potential.",
     },
   },
   fr: {
@@ -27,12 +24,9 @@ const resources = {
       Contact: "Contact",
       Welcome: "Voilà mon",
       World: "univers",
+      Resume: "CV",
       Blurb:
-        "Depuis mon plus jeune âge, les langues et les langages, qu'ils soient parlés, signés ou codés, m'ont toujours fasciné. Pour moi, ils représentent les liens les plus puissants entre compréhension et connexion. En tant que développeur, je canalise cette passion pour responsabiliser les utilisateurs et leur donner voix au chapitre.",
-      Synergia:
-        "Synergía est une organisation internationale des droits de l'homme LGBT dédiée à l'émancipation des mouvements sociaux locaux. Construite lors d'un hackathon d'une demi-journée chez Github.",
-      "Moving On":
-        "The Power of Friendship (La force de l'amitié) est un jeu de plateforme énigmatique tout mignon où une joyeuse bande de petits cubes doit s'unir pour triompher. Réalisé en JavaScript, HTML et CSS.",
+        "Depuis mon enfance, les langues et les langages—parlés, signés et codés—m'ont toujours fasciné. Ce sont les liens les plus puissants entre compréhension et connexion. En tant que développeur, je canalise cette passion pour responsabiliser les utilisateurs.",
     },
   },
 };

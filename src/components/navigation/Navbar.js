@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-scroll";
 import styled from "styled-components";
 import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
@@ -20,7 +19,7 @@ const NavbarStyled = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   display: inline-block;
   padding: 5px;
   margin: 5px;
@@ -47,12 +46,6 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const LinksContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-grow: 1; /* This will allow it to take up all available space */
-`;
-
 const ToggleContainer = styled.div`
   display: flex;
   align-items: center;
@@ -63,20 +56,6 @@ const Navbar = ({ theme, toggleTheme }) => {
   return (
     <NavbarStyled>
       <Logo />
-      <LinksContainer>
-        <StyledLink to="about" smooth duration={2000}>
-          {t("About")}
-        </StyledLink>
-        <StyledLink to="pastwork" smooth duration={2000}>
-          {t("Past Work")}
-        </StyledLink>
-        <StyledLink to="projects" smooth duration={2000}>
-          {t("Projects")}
-        </StyledLink>
-        <StyledLink to="contact" smooth duration={2000}>
-          {t("Contact")}
-        </StyledLink>
-      </LinksContainer>
       <ToggleContainer>
         <LanguageToggle />
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
