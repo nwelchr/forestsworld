@@ -15,7 +15,12 @@ const Background = styled.div`
     mode === "dark"
       ? "linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%), black;"
       : "linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%), white;"}
+      
   background-size: 300% 300%;
+  @media (max-width: 768px) {
+    background-size: 200% 200%;
+  }
+
   animation: gradient 20s ease infinite;
   transition: background 1s ease-in-out;
 

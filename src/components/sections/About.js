@@ -7,8 +7,14 @@ import resume from "../../assets/resume.pdf";
 
 const SelfImg = styled.img`
   border-radius: 50%;
+
   max-width: 300px;
   height: 300px;
+  @media (max-width: 768px) {
+    max-width: 200px;
+    height: 200px;
+  }
+
   object-fit: cover;
   border: 1px dotted #999;
   padding: 2px;
@@ -19,6 +25,10 @@ const ColumnFlex = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const WelcomeText = styled.h1`
@@ -26,12 +36,26 @@ const WelcomeText = styled.h1`
   font-weight: 200;
   font-size: 5rem;
   letter-spacing: 0.001rem;
+
+  padding: 0 5%;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    padding: 0 20%;
+  }
 `;
 
 const Blurb = styled.section`
   display: flex;
-  padding: 20px;
   max-width: 600px;
+
+  padding: 10px;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    padding: 5px;
+    text-align: center;
+  }
 `;
 
 const IconWrapper = styled.a`
@@ -46,6 +70,11 @@ const IconWrapper = styled.a`
 const StyledIcon = styled.svg`
   width: 32px;
   height: 32px;
+
+  @media (max-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
 
   path {
     fill: ${({ theme: { mode } }) => (mode === "dark" ? "#bbb" : "#000")};
@@ -92,7 +121,12 @@ const Links = () => {
 
 const ResumeButton = styled.a`
   display: inline-block;
+
   padding: 10px 20px;
+  @media (max-width: 768px) {
+    padding: 5px 10px;
+  }
+
   border-radius: 5px;
   background-color: ${({ theme: { mode } }) =>
     mode === "dark" ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)"};
