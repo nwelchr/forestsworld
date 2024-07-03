@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
 import { useTranslation } from "react-i18next";
-import { Logo } from "../";
+import { Logo } from "..";
 
 const NavbarStyled = styled.div`
   width: 100%;

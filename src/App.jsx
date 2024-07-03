@@ -1,4 +1,3 @@
-import React from "react";
 import { About } from "./components/sections";
 import { Navbar } from "./components/navigation";
 import { useTheme, GlobalStyles, ThemeProvider } from "./theme";

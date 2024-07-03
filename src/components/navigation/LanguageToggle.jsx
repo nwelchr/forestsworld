@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import styled, { css } from "styled-components";
+import { useState, useEffect } from "react";
+import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
 const StyledLink = styled.a`
