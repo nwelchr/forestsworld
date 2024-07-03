@@ -2,7 +2,7 @@ import React from "react";
 import { Section } from "../common";
 import { useTranslation } from "react-i18next";
 import styled, { css } from "styled-components";
-import self from "../../assets/self-test.png";
+import self from "../../assets/self.webp";
 import resume from "../../assets/resume.pdf";
 
 const SelfImg = styled.img`
@@ -10,6 +10,12 @@ const SelfImg = styled.img`
 
   max-width: 300px;
   height: 300px;
+
+  @media (max-width: 1024px) {
+    max-width: 250px;
+    height: 250px;
+  }
+
   @media (max-width: 768px) {
     max-width: 200px;
     height: 200px;
