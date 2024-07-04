@@ -1,4 +1,4 @@
-import { About } from "./components/sections";
+import { About, Projects, Footer } from "./components/sections";
 import { Navbar } from "./components/navigation";
 import { useTheme, GlobalStyles, ThemeProvider } from "./theme";
 
@@ -10,6 +10,8 @@ function App() {
       <GlobalStyles />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <About />
+      <Projects />
+      <Footer />
     </ThemeProvider>
   );
 }

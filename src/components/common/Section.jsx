@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-  padding: 0px 80px;
-  height: 100vh;
+  padding: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;

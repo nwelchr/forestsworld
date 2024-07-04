@@ -1,28 +1,65 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "../common";
 
 const ProjectWrapper = styled.div`
-  flex: 1 1 calc(33.333% - 16px); // Assumes three items per row minus the gap
+  background-color: rgba(0, 0, 0, 0.2); // Background color
+  border-radius: 16px; // Increased roundedness
+  padding: 30px;
+  width: 400px; // Fixed width for consistency
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   box-sizing: border-box;
-  padding: 20px;
-  border: 1px solid #ddd; // Optional border
-  border-radius: 8px; // Optional rounded corners
 
   img {
-    width: 100%;
+    width: 300px; // Image size
+    height: auto;
     object-fit: cover;
+    border-radius: 16px;
   }
 
   h3 {
     margin-top: 10px;
+    font-size: 1rem; // Smaller text size
+  }
+
+  p {
+    margin: 20px 0;
+    font-size: 0.975rem; // Smaller text size
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
   }
 `;
 
-const Project = ({ description, imageUrl }) => {
+const Project = ({ description, imageUrl, liveLink, githubLink }) => {
   return (
     <ProjectWrapper>
-      <img src={imageUrl} />
-      <span>{description}</span>
+      <img src={imageUrl} alt="Project" />
+      <p>{description}</p>
+      <ul>
+        {liveLink && (
+          <li>
+            <Link href={liveLink} target="_blank" rel="noopener noreferrer">
+              Live
+            </Link>
+          </li>
+        )}
+        {githubLink && (
+          <li>
+            <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+              Github
+            </Link>
+          </li>
+        )}
+      </ul>
     </ProjectWrapper>
   );
 };

@@ -1,3 +1,4 @@
+import Link from "./Link";
 import Section from "./Section";
 
-export { Section };
+export { Link, Section };
