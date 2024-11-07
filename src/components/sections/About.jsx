@@ -75,7 +75,7 @@ const About = () => {
         <Blurb>
           <p>{t("Blurb")}</p>
         </Blurb>
-        <SelfImg src={self} />
+        <SelfImg width="300px" height="300px" src={self} />
       </ColumnFlex>
     </Section>
   );
