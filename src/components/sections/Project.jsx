@@ -14,20 +14,20 @@ const ProjectWrapper = styled.div`
   box-sizing: border-box;
 
   img {
-    width: 300px; // Image size
-    height: auto;
+    width: 300px;
+    height: 196px;
     object-fit: cover;
     border-radius: 16px;
   }
 
   h3 {
     margin-top: 10px;
-    font-size: 1rem; // Smaller text size
+    font-size: 1rem;
   }
 
   p {
     margin: 20px 0;
-    font-size: 0.975rem; // Smaller text size
+    font-size: 0.975rem;
   }
 
   ul {
@@ -42,7 +42,13 @@ const ProjectWrapper = styled.div`
 const Project = ({ description, imageUrl, liveLink, githubLink }) => {
   return (
     <ProjectWrapper>
-      <img src={imageUrl} alt="Project" />
+      <img
+        loading="lazy"
+        width="300px"
+        height="196px"
+        src={imageUrl}
+        alt="Project"
+      />
       <p>{description}</p>
       <ul>
         {liveLink && (
