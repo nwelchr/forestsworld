@@ -126,7 +126,7 @@ Error generating stack: `+o.message+`
     padding: 5px;
     text-align: center;
   }
-`,_m=()=>{const{t:e}=Yr();return O.jsxs(vu,{id:"about",children:[O.jsxs(Mm,{children:[e("Welcome")," ",e("World"),"."]}),O.jsxs(Fm,{children:[O.jsx($m,{children:O.jsx("p",{children:e("Blurb")})}),O.jsx(Dm,{src:Im})]})]})},Um=b.div`
+`,_m=()=>{const{t:e}=Yr();return O.jsxs(vu,{id:"about",children:[O.jsxs(Mm,{children:[e("Welcome")," ",e("World"),"."]}),O.jsxs(Fm,{children:[O.jsx($m,{children:O.jsx("p",{children:e("Blurb")})}),O.jsx(Dm,{width:"300px",height:"300px",src:Im})]})]})},Um=b.div`
   background-color: rgba(0, 0, 0, 0.2); // Background color
   border-radius: 16px; // Increased roundedness
   padding: 30px;
