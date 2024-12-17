@@ -23,6 +23,8 @@ const resources = {
         "Synergía is an international LGBT human rights organization dedicated to empowering local social movements. Built in a half-day hackathon at Github.",
       Verbling:
         "A simple note-taking app. Built with create-react-app and React context API.",
+      LiveDocs:
+        "LiveDocs is a real-time collaborative text editor that allows users to edit, comment, and share documents seamlessly. Built with Next.js, TypeScript, Shadcn components, Clerk for authentication, and Liveblocks for real-time features. Deployed using Vercel.",
     },
   },
   fr: {
@@ -45,6 +47,8 @@ const resources = {
         "Synergía est une organisation internationale de défense des droits humains LGBT dédiée à l'autonomisation des mouvements sociaux locaux. Construit lors d'un hackathon d'une demi-journée chez Github.",
       Verbling:
         "Une application simple de prise de notes. Construite avec create-react-app et React context API.",
+      LiveDocs:
+        "LiveDocs est un outil de rédaction collaborative en temps réel permettant aux utilisateurs d'éditer, commenter et partager des documents sans effort. Développé avec Next.js, TypeScript, les composants Shadcn, Clerk pour l'authentification, et Liveblocks pour les fonctionnalités en temps réel. Déployé via Vercel.",
     },
   },
 };
